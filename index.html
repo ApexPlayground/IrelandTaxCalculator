@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+        <!--Page Heading-->
+        <h1>Ireland Tax Calculator</h1>
+
+        <!--drop down menu to select tax you want to calculate-->
+        <div class="typeDropdown">
+            <label for="taxType">
+                <h3>Select Tax Type</h3>
+            </label>
+            <select name="taxType" id="taxType">
+                <option value="incomeTax">Income Tax</option>
+                <option value="USC"> Universal Social Charge (USC)</option>
+                <option value="VAT">Value Added Tax (VAT)</option>
+                <option value="CGT">Capital Gains Tax (CGT)</option>
+                <option value="CT">Corporation Tax</option>
+                <option value="LPT">Local Property Tax (LPT)</option>
+                <option value="PRSI">Pay Related Social Insurance (PRSI)</option>
+            </select>
+        </div>
+
+        <!-- Add a container element to hold the selected menu -->
+
+        <div class="menu-container">
+
+
+            <!-- menu for Income Tax -->
+            <div class="menu" id="incomeTaxMenu">
+                <!-- Add content for Income Tax menu here -->
+                <h2>Income Tax Menu</h2>
+                <form>
+                    <label for="income">Income(€):</label>
+                    <input type="number" id="income" name="income" required>
+                    <button type="button" onclick="calculateTax()">Calculate Tax</button>
+                </form>
+            </div>
+            <!-- menu for Universal Social Charge (USC) -->
+            <div class="menu" id="USCMenu">
+                <!-- Add content for USC menu here -->
+                <h2>USC Menu</h2>
+                <form>
+                    <label for="income">Income(€):</label>
+                    <input type="number" id="income" name="income" required>
+                    <label for="uscRate">USC Rate (%):</label>
+                    <input type="number" id="uscRate" name="uscRate" required>
+                    <button type="button" onclick="calculateUSC()">Calculate USC</button>
+                </form>
+            </div>
+            <!-- menu for Value Added Tax (VAT) -->
+            <div class="menu" id="VATMenu">
+                <!-- Add content for VAT menu here -->
+                <h2>VAT Menu</h2>
+                <form>
+                    <label for="amount">Amount(€):</label>
+                    <input type="number" id="amount" name="amount" required>
+                    <label for="vatRate">VAT Rate (%):</label>
+                    <input type="number" id="vatRate" name="vatRate" required>
+                    <button type="button" onclick="calculateVAT()">Calculate VAT</button>
+                </form>
+            </div>
+
+            <!-- menu for  Capital Gain Tax (CGT) -->
+            <div class="menu" id="CGTMenu">
+                <!-- Add content for VAT menu here -->
+                <h2>CGT Menu</h2>
+                <form>
+                    <label for="salePrice">Sale Price(€):</label>
+                    <input type="number" id="salePrice" name="salePrice" required>
+                    <label for="purchasePrice">Purchase Price(€):</label>
+                    <input type="number" id="purchasePrice" name="purchasePrice" required>
+                    <label for="cgtRate">CGT Rate (%):</label>
+                    <input type="number" id="cgtRate" name="cgtRate" required>
+                    <label for="cgtExemption">CGT Exemption:</label>
+                    <input type="number" id="cgtExemption" name="cgtExemption" value="0">
+                    <button type="button" onclick="calculateCGT()">Calculate CGT</button>
+                </form>
+            </div>
+
+            <!-- menu for Corporation Tax (CT) -->
+            <div class="menu" id="CTMenu">
+                <!-- Add content for VAT menu here -->
+                <h2>CT Menu</h2>
+                <form>
+                    <label for="profitBeforeTax">Profit Before Tax(€):</label>
+                    <input type="number" id="profitBeforeTax" name="profitBeforeTax" required>
+                    <label for="ctRate">CT Rate (%):</label>
+                    <input type="number" id="ctRate" name="ctRate" required>
+                    <button type="button" onclick="calculateCT()">Calculate</button>
+                </form>
+            </div>
+
+            <!-- menu for Local Property Tax (LPT) -->
+            <div class="menu" id="LPTMenu">
+                <!-- Add content for VAT menu here -->
+                <h2>LPT Menu</h2>
+                <form>
+                    <label for="propertyValue">Property Value(€):</label>
+                    <input type="number" id="propertyValue" name="propertyValue" required>
+                    <label for="lptRate">LPT Rate (%):</label>
+                    <input type="number" id="lptRate" name="lptRate" required>
+                    <button type="button" onclick="calculateLPT()">Calculate</button>
+                </form>
+            </div>
+
+            <!-- menu for Pay Related Social Insurance (PRSI) -->
+            <div class="menu" id="PRSIMenu">
+                <!-- Add content for VAT menu here -->
+                <h2>PRSI Menu</h2>
+                <form>
+                    <label for="grossIncome">Gross Income(€):</label>
+                    <input type="number" id="grossIncome" name="grossIncome" required>
+                    <label for="prsiRate">PRSI Rate (%):</label>
+                    <input type="number" id="prsiRate" name="prsiRate" required>
+                    <button type="button" onclick="calculatePRSI()">Calculate</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right, #169b62, #ff883e, #ffffff);
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+  }
+}
+
+/* Menu container styles */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Menu styles */
+
+.menu {
+  width: 100%;
+  max-width: 310px;
+  margin: 0 auto;
+  padding-right: 50px;
+  padding: 20px;
+  background-color: lightgreen;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.menu-container h2 {
+  text-align: center;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  max-width: 310px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-right: 30px;
+  margin-left: -10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto; /* Use margin-left:auto to center the button */
+  margin-right: auto; /* Use margin-right:auto to center the button */
+  display: block; /* Use display:block to center the button within its parent element */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Heading styles */
+.container h1 {
+  text-align: center;
+}
+
+/* Content styles */
+p {
+  margin-bottom: 0;
+}
+
+.typeDropdown {
+  width: 100%;
+  max-width: 310px;
+  padding: 20px;
+  background-color: lightgreen;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 20px;
+  align-items: center; /* Add align-items: center to vertically center */
+  margin: 0 auto;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label,
+select {
+  display: block;
+  margin-bottom: 10px;
+}
+
+select {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  margin-left: 2px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Custom style for the select menu */
+select {
+  background-color: white;
+  border: 1px solid white;
+}
+
+/* Style for the arrow icon */
+select::-ms-expand {
+  display: none;
+}
+
+select::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: white;
+  pointer-events: none;
+}
+
+/* Hover effect */
+
+/* Focus effect */
+select:focus {
+  outline: none;
+  background-color: white;
+}
+.menu {
+  display: none; /* Hide all menus by default */
+}

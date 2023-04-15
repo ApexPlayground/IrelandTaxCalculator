@@ -22,7 +22,7 @@
                 <h3>Select Tax Type</h3>
             </label>
             <select name="taxType" id="taxType">
-                <option value="incomeTax">Income Tax</option>
+                <option value="incomeTax">Household Income Tax</option>
                 <option value="USC"> Universal Social Charge (USC)</option>
                 <option value="VAT">Value Added Tax (VAT)</option>
                 <option value="CGT">Capital Gains Tax (CGT)</option>
@@ -42,11 +42,15 @@
                 <!-- Add content for Income Tax menu here -->
                 <h2>Income Tax Menu</h2>
                 <form>
-                    <label for="income">Income(€):</label>
+                    <label for="income">Household Income(€):</label>
                     <input type="number" id="income" name="income" required>
                     <button type="button" onclick="calculateTax()">Calculate Tax</button>
                 </form>
+
+                <p id="taxResult"></p>
+                <p id="moneyLeft"></p>
             </div>
+
             <!-- menu for Universal Social Charge (USC) -->
             <div class="menu" id="USCMenu">
                 <!-- Add content for USC menu here -->

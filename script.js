@@ -21,3 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+const calculateTax = () => {
+    var income = parseFloat(document.getElementById("income").value);
+    var tax = 0;
+
+    // Tax calculation logic - modify as needed
+    if (income <= 35300) {
+        tax = income * 0.20;
+    } else if (income <= 70600) {
+        tax = income * 0.40;
+    } else {
+        tax = income * 0.45;
+    }
+    let moneyLeft = income - tax
+
+    document.getElementById("taxResult").innerHTML = "Tax Amount: €" + tax.toFixed(2);
+    document.getElementById("moneyLeft").innerHTML = "Amount Left: €" + moneyLeft.toFixed(2)
+
+}
+

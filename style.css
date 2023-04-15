@@ -8,6 +8,7 @@ body {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 100px;
   padding: 20px;
   background-color: white;
   border-radius: 10px;
@@ -118,7 +119,6 @@ select {
 }
 
 select {
-  appearance: none;
   outline: none;
   border: none;
   background: transparent;
